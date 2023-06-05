@@ -1,6 +1,6 @@
 .table {
     table-layout: fixed;
-    width: 60%;
+    width: 100%;
     border-collapse: collapse;
 }
 .table th{
