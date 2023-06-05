@@ -2,7 +2,7 @@
 import styles from './Profile.module.css';
 import PropTypes from "prop-types"
 
-const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => {
+export const Profile = ({ username, tag, location, avatar, stats: { followers, views, likes } }) => {
   return (
     <div className={styles.profile}>
         <div className={styles.description}>
@@ -45,5 +45,3 @@ Profile.propTypes = {
     likes: PropTypes.number,
   })
 }
-
-export default Profile
