@@ -3,6 +3,7 @@ import data from "../data.json";
 import friends from "../friends.json";
 import PropTypes from "prop-types"
 import transactions from "../transactions.json";
+
 import { Profile } from './profile/profile';
 import { Statistics } from "./statistics/statistics";
 import { FriendList } from "./friendlist/friendlist";
@@ -53,5 +54,23 @@ Statistics.propTypes = {
     id: PropTypes.string,
     label: PropTypes.string,
     percentage: PropTypes.number,
+  }))
+}
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(PropTypes.shape({
+    avatar: PropTypes.string,
+    name: PropTypes.string,
+    isOnline: PropTypes.bool,
+    id: PropTypes.number
+  }))
+}
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    type: PropTypes.string,
+    amount: PropTypes.string,
+    currency: PropTypes.string,
   }))
 }

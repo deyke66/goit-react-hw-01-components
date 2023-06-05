@@ -1,6 +1,6 @@
 import styles from './friendlistItem.module.css';
 
-export const FriendListItem = ({ avatar, name, isOnline, id }) => {
+export const FriendListItem = ({ avatar, name, isOnline }) => {
 
     return (
       <li className={styles.item}>
@@ -11,10 +11,4 @@ export const FriendListItem = ({ avatar, name, isOnline, id }) => {
             <p className={styles.name}>{name}</p>
       </li>
     );
-} 
-
-// function onlineStatus(status) {
-//   if (!status) {
-    
-//   }
-// }
+}
