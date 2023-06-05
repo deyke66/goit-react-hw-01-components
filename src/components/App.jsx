@@ -3,10 +3,11 @@ import data from "../data.json";
 import friends from "../friends.json";
 import transactions from "../transactions.json";
 
-import { Profile } from "./Profile/Profile";
-import { Statistics } from "./Statistics/Statistics";
-import { FriendList } from "./FriendList/FriendList";
-import { TransactionHistory } from "./Transactions/Transactions";
+// import { Profile } from "./Profile/Profile";
+import Profile from "./Profile/Profile";
+// import { Statistics } from "./Statistics/Statistics";
+// import { FriendList } from "./FriendList/FriendList";
+// import { TransactionHistory } from "./Transactions/Transactions";
 
 export const App = () => {
   return (
@@ -22,9 +23,9 @@ export const App = () => {
       }}
     >
       <Profile {...user}/>
-      <Statistics title stats={data} />
+      {/* <Statistics title stats={data} />
       <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
+      <TransactionHistory items={transactions} /> */}
     </div>
   );
 };
