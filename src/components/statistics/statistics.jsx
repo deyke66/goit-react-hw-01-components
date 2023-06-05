@@ -1,4 +1,5 @@
-import styles from './statistics.module.css';
+import styles from './Statistics.module.css';
+import PropTypes from "prop-types"
 
 export const Statistics = props => {
   const { title, stats } = props;
@@ -20,9 +21,6 @@ export const Statistics = props => {
   );
 };
 
-// function randomBackgroundColor() {
-//   return `#${Math.floor(Math.random()*16777215).toString(16)}`
-// }
 
 function generateDarkBackgroundColor() {
   let color = '#';
@@ -46,4 +44,13 @@ function generateDarkBackgroundColor() {
   color += red + green + blue;
   
   return color;
+}
+
+Statistics.propTypes = {
+  title: PropTypes.bool,
+  stats: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    label: PropTypes.string,
+    percentage: PropTypes.number,
+  }))
 }
